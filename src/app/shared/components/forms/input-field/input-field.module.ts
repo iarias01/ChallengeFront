@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ContactComponent } from './contact.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ButtonModule } from '../../button/button.module';
 import { TranslateModule } from '@ngx-translate/core';
+import { InputFieldComponent } from './input-field.component';
 
 @NgModule({
-  declarations: [ContactComponent],
-  exports: [ContactComponent],
+  declarations: [InputFieldComponent],
+  exports: [InputFieldComponent],
   imports: [CommonModule, ReactiveFormsModule, ButtonModule, TranslateModule],
 })
-export class ContactModule {}
+export class InputFieldModule {}

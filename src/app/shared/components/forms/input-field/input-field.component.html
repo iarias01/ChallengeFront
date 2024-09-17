@@ -1,11 +1,21 @@
 <div class="form-group">
   <label class="form-group__label">{{ label }}:</label>
   <input
+    *ngIf="!isTextarea"
     [type]="type"
     class="form-group__input"
     [ngClass]="{ 'form-group--invalid': showError }"
     [formControl]="control"
   />
+
+  <textarea
+    *ngIf="isTextarea"
+    class="form-group__input"
+    [ngClass]="{ 'form-group--invalid': showError }"
+    [formControl]="control"
+    rows="5"
+  ></textarea>
+
   <div *ngIf="showError">
     <ng-container *ngFor="let errorKey of control.errors | keyvalue">
       <small class="error-message">{{ errorMessages[errorKey.key] }}</small>

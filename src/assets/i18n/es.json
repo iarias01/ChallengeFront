@@ -13,7 +13,7 @@
   "namesAreRequired": "Los nombres son obligatorios.",
   "onlyAlphabeticCharactersAreAllowed": "Solo se permiten caracteres alfabéticos.",
   "surnamesAreRequired": "Los apellidos son obligatorios.",
-  "commentAreRequired": "El comentario es obligatorio.",
+  "commentIsRequired": "El comentario es obligatorio.",
   "onlyImageOrPDFFilesAreAllowed": "Solo se permiten archivos de imagen o PDF.",
   "file": "Archivo",
   "selectLanguage": "Selecciona lenguaje",

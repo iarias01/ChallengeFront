@@ -10,9 +10,10 @@ export class InputFieldComponent {
   @Input() label!: string;
   @Input() control!: FormControl;
   @Input() type: string = 'text';
+  @Input() isTextarea: boolean = false;
   @Input() submitted: boolean = false;
   @Input() errorMessages: { [key: string]: string } = {};
-  
+
   get showError(): boolean {
     return (this.submitted || this.control.touched) && this.control.invalid;
   }

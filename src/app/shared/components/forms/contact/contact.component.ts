@@ -108,4 +108,8 @@ export class ContactComponent {
       }
     });
   }
+
+  get formControl(): { [key: string]: FormControl } {
+    return this.contactForm.controls as { [key: string]: FormControl };
+  }
 }

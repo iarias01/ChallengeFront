@@ -13,7 +13,7 @@
   "namesAreRequired": "Names are required.",
   "onlyAlphabeticCharactersAreAllowed": "Only alphabetic characters are allowed.",
   "surnamesAreRequired": "Surnames are required.",
-  "commentAreRequired": "Comment are required.",
+  "commentIsRequired": "Comment are required.",
   "onlyImageOrPDFFilesAreAllowed": "Only image or PDF files are allowed.",
   "file": "File",
   "selectLanguage": "Select Language",
