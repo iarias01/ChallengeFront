@@ -1,0 +1,19 @@
+<div class="modal-overlay" [ngClass]="{ active: showModal }" (click)="closeModalOverlay($event)">
+  <div
+    class="modal-container"
+    [ngClass]="{
+      'modal-container--without-background': removeBackground,
+      'modal-size-auto': size === sizeModal.AUTO,
+      'modal-size-xs': size === sizeModal.SMALL,
+      'modal-size-md': size === sizeModal.MEDIUM,
+      'modal-size-xl': size === sizeModal.EXTRALARGE,
+      'modal-size-full': size === sizeModal.FULLSCREEN
+    }"
+  >
+    <h1 class="modal-container__title">{{ title | translate }}</h1>
+    <button class="modal-container__close" (click)="closeModal()" *ngIf="isCloseable">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <ng-container *ngTemplateOutlet="template"></ng-container>
+  </div>
+</div>

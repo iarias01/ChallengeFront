@@ -1,0 +1,14 @@
+<button
+  class="challenge-button"
+  [ngClass]="{
+    'challenge-button--small': sizeButton.SMALL === size,
+    'challenge-button--primary': typeButton.PRIMARY === type,
+    'challenge-button--secondary': typeButton.SECONDARY === type,
+    'challenge-button--black': typeButton.BLACK === type
+  }"
+  [ngStyle]="{ width: widthButton }"
+  [disabled]="disabled"
+  (click)="action()"
+>
+  {{ text | translate }}
+</button>

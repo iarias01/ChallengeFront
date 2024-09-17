@@ -1,0 +1,57 @@
+@import '../../../styles.scss';
+
+* {
+  color: $color-black-secondary;
+  i {
+    color: $color-gray;
+  }
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  height: calc(100vh - 84px);
+  position: relative;
+  margin: 0;
+  text-align: center;
+  background-color: #fff;
+  padding: 50px 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  //overflow: hidden;
+}
+
+@media screen and (max-width: $breackpoint-cel) {
+  .container {
+    height: calc(100vh - 61px);
+  }
+}

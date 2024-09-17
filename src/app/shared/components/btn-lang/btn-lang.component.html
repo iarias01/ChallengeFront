@@ -1,0 +1,20 @@
+<div class="dropdown" (click)="toggleDropdown()">
+  <button class="dropbtn">
+    {{ 'selectLanguage' | translate }}
+    <img
+      class="flag"
+      [src]="'./assets/images/languages/' + selectedLanguage.code + '.png'"
+      alt="lang"
+    />
+  </button>
+  <div class="dropdown-content" [class.show]="dropdownOpen">
+    <div class="dropdown-item" *ngFor="let lang of languages" (click)="setLanguage($event, lang)">
+      <img
+        class="flag"
+        [src]="'./assets/images/languages/' + lang.code + '.png'"
+        alt="{{ lang.name }}"
+      />
+      {{ lang.name }}
+    </div>
+  </div>
+</div>

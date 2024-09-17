@@ -1,0 +1,64 @@
+@import '../../../../../styles.scss';
+.form {
+  padding: 10px;
+  min-width: 320px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 13px;
+  height: 85px;
+  &__label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  &__text-invalid {
+    color: $color-red;
+    font-size: 12px;
+    margin-top: 5px;
+    font-weight: bold;
+  }
+  &--disabled {
+    background-color: $color-disabled;
+    color: $color-gray;
+  }
+  &--invalid {
+    border: solid 1px $color-red !important; /*the general input class of styles.scss is overwritten*/
+    &:focus {
+      outline: solid 1px $color-red !important; /*the general input class of styles.scss is overwritten*/
+    }
+  }
+}
+
+.error-message {
+  color: $color-red;
+  margin-top: 7px;
+}
+
+.attachment {
+  margin: 20px auto;
+  label {
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 8px 13px;
+    background-color: $color-black;
+    color: $color-white;
+    font-weight: 400;
+    & + input {
+      display: none;
+    }
+  }
+  b {
+    display: inline-block;
+    margin-left: 20px;
+  }
+}
+
+.actions {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

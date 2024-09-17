@@ -1,0 +1,22 @@
+{
+  "contact": "Contacto",
+  "toContactUsClickTheButtonBelow": "Para contactarnos, haz clic en el botón de abajo.",
+  "contactForm": "Formulario de Contacto",
+  "form": "Formulario",
+  "email": "Email",
+  "names": "Nombres",
+  "surnames": "Apellidos",
+  "comment": "Comentario",
+  "send": "Enviar",
+  "emailIsRequired": "El email es obligatorio.",
+  "invalidEmailFormat": "Formato de email inválido.",
+  "namesAreRequired": "Los nombres son obligatorios.",
+  "onlyAlphabeticCharactersAreAllowed": "Solo se permiten caracteres alfabéticos.",
+  "surnamesAreRequired": "Los apellidos son obligatorios.",
+  "commentAreRequired": "El comentario es obligatorio.",
+  "onlyImageOrPDFFilesAreAllowed": "Solo se permiten archivos de imagen o PDF.",
+  "file": "Archivo",
+  "selectLanguage": "Selecciona lenguaje",
+  "commentSent": "Comentario envíado",
+  "anErrorOccurredWithTheShipment": "Ocurrió un error con el envío"
+}

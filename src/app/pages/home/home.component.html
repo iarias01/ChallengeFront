@@ -1,0 +1,27 @@
+<div class="container">
+  <h1>{{ 'contact' | translate }}</h1>
+  <p>{{ 'toContactUsClickTheButtonBelow' | translate }}</p>
+
+  <app-button
+    text="contactForm"
+    [type]="typeButton.PRIMARY"
+    (actionClick)="showContactForm = true"
+  ></app-button>
+  <footer class="footer">
+    <app-btn-lang></app-btn-lang>
+  </footer>
+</div>
+
+<ng-template #contact>
+  <app-contact (finished)="showContactForm = false"></app-contact>
+</ng-template>
+
+<app-modal
+  [title]="'form'"
+  [showModal]="showContactForm"
+  [template]="contact"
+  [isCloseable]="true"
+  [size]="sizeModal.AUTO"
+  (clickClose)="showContactForm = false"
+>
+</app-modal>

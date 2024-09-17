@@ -1,0 +1,22 @@
+{
+  "contact": "Contact",
+  "toContactUsClickTheButtonBelow": "To contact us click the button below",
+  "contactForm": "Contact Form",
+  "form": "Form",
+  "email": "Email",
+  "names": "Names",
+  "surnames": "Surnames",
+  "comment": "Comment",
+  "send": "Send",
+  "emailIsRequired": "Email is required.",
+  "invalidEmailFormat": "Invalid email format.",
+  "namesAreRequired": "Names are required.",
+  "onlyAlphabeticCharactersAreAllowed": "Only alphabetic characters are allowed.",
+  "surnamesAreRequired": "Surnames are required.",
+  "commentAreRequired": "Comment are required.",
+  "onlyImageOrPDFFilesAreAllowed": "Only image or PDF files are allowed.",
+  "file": "File",
+  "selectLanguage": "Select Language",
+  "commentSent": "Comment sent",
+  "anErrorOccurredWithTheShipment": "An error occurred with the shipment"
+}

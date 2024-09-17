@@ -1,0 +1,117 @@
+<!-- contact-form.component.html -->
+<form [formGroup]="contactForm" class="form">
+  <div class="form-group">
+    <label class="form-group__label" for="email">{{ 'email' | translate }}:</label>
+    <input
+      class="form-group__input"
+      [ngClass]="{
+        'form-group--invalid': submitted && formControls['email'].invalid
+      }"
+      id="email"
+      formControlName="email"
+      type="email"
+    />
+    <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
+      <small
+        class="error-message"
+        *ngIf="submitted || contactForm.get('email')?.errors?.['required']"
+        >{{ 'emailIsRequired' | translate }}</small
+      >
+      <br />
+      <small
+        class="error-message"
+        *ngIf="submitted || contactForm.get('email')?.errors?.['email']"
+        >{{ 'invalidEmailFormat' | translate }}</small
+      >
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="form-group__label" for="firstName">{{ 'names' | translate }}:</label>
+    <input
+      class="form-group__input"
+      [ngClass]="{
+        'form-group--invalid': submitted && formControls['firstName'].invalid
+      }"
+      id="firstName"
+      formControlName="firstName"
+      type="text"
+    />
+    <div *ngIf="contactForm.get('firstName')?.invalid && contactForm.get('firstName')?.touched">
+      <small
+        class="error-message"
+        *ngIf="submitted || contactForm.get('firstName')?.errors?.['required']"
+        >{{ 'namesAreRequired' | translate }}</small
+      >
+      <br />
+      <small
+        class="error-message"
+        *ngIf="submitted || contactForm.get('firstName')?.errors?.['pattern']"
+        >{{ 'onlyAlphabeticCharactersAreAllowed' | translate }}</small
+      >
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="form-group__label" for="lastName">{{ 'surnames' | translate }}:</label>
+    <input
+      class="form-group__input"
+      [ngClass]="{
+        'form-group--invalid': submitted && formControls['lastName'].invalid
+      }"
+      id="lastName"
+      formControlName="lastName"
+      type="text"
+    />
+    <div *ngIf="contactForm.get('lastName')?.invalid && contactForm.get('lastName')?.touched">
+      <small
+        class="error-message"
+        *ngIf="submitted || contactForm.get('lastName')?.errors?.['required']"
+        >{{ 'surnamesAreRequired' | translate }}</small
+      >
+      <br />
+      <small
+        class="error-message"
+        *ngIf="submitted || contactForm.get('lastName')?.errors?.['pattern']"
+        >{{ 'onlyAlphabeticCharactersAreAllowed' | translate }}</small
+      >
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="form-group__label" for="comment">{{ 'comment' | translate }}:</label>
+    <textarea
+      class="form-group__input"
+      [ngClass]="{
+        'form-group--invalid': submitted && formControls['comment'].invalid
+      }"
+      rows="5"
+      id="comment"
+      formControlName="comment"
+    ></textarea>
+    <div *ngIf="contactForm.get('comment')?.invalid && contactForm.get('comment')?.touched">
+      <small
+        class="error-message"
+        *ngIf="submitted || contactForm.get('comment')?.errors?.['required']"
+        >{{ 'commentAreRequired' | translate }}</small
+      >
+    </div>
+  </div>
+
+  <div class="attachment">
+    <label class="form-group__label" for="attachment"><i class="fa-solid fa-upload"></i></label>
+    <input id="attachment" type="file" (change)="onFileChange($event)" />
+    <b *ngIf="this.attachment?.name"
+      >{{ 'file' | translate }}: {{ this.attachment!.name.substring(0, 20).trim() }}
+      <span *ngIf="this.attachment!.name.length > 20">...</span></b
+    >
+    <div *ngIf="contactForm.get('attachment')?.errors?.['invalidFileType']">
+      <br />
+      <small class="error-message">{{ 'onlyImageOrPDFFilesAreAllowed' | translate }}</small>
+    </div>
+  </div>
+
+  <div class="actions">
+    <app-button text="send" [type]="typeButton.PRIMARY" (actionClick)="onSubmit()"></app-button>
+  </div>
+</form>
